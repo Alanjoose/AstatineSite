@@ -1,0 +1,14 @@
+.mobile-hidden
+{
+    display: none;
+}
+
+@media ( min-width: 400px ) and ( min-width: 700px )
+{
+    body
+    {
+        max-width: 680px;
+    }
+
+    
+}

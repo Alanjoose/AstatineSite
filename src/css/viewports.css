@@ -1,0 +1,18 @@
+.mobile-hidden
+{
+    display: none;
+}
+
+@media ( min-width:680px )
+{
+    .mobile-hidden
+    {
+        display: flex;
+    }
+
+    .desktop-hidden
+    {
+        display: none;
+    }
+
+}

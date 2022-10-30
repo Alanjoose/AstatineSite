@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/elements.css">
-    <link rel="stylesheet" href="css/viewport.css">
+    <title>Astatine - A simple PHP API</title>
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+     crossorigin="anonymous">
+
+     <!-- PAGE-CSS -->
+     <link rel="stylesheet" href="css/elements.css">
+     <link rel="stylesheet" href="css/viewports.css">
+     <link rel="stylesheet" href="css/states.css">
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script src="js/interfaces.js"></script>
 
     <!-- ION-ICONS API -->
@@ -24,59 +34,190 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME API -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer" /> 
+
 </head>
 <body>
     
-    <header class="page-header">
+  <div class="container-fluid">
 
-        <nav class="header-nav">
+    <!-- PAGE-HEADER -->
+    <nav class="navbar navbar-expand-lg align-middle justify-content-around" id="header">
+        <!-- title -->
+        <a href="#" class="navbar-brand">
             <h1>Astatine</h1>
+        </a>
 
-            <ul class="header-nav-links-list mobile-hidden">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
+        <!-- header-nav-links (on desktops)-->
+        <ul class="navbar-nav mr-auto mobile-hidden">
+            <li class="nav-item active">
+                <a href="#" id="active">Home</a>
+            </li>
 
-            <ion-icon name="menu-outline"></ion-icon>
-        </nav>
+            <li class="nav-item">
+                <a href="#">Features</a>
+            </li>
 
-    </header>
+            <li class="nav-item">
+                <a href="#">About</a>
+            </li>
+        </ul>
 
-    <main class="page-main">
-        
-        <section class="main-section">
-            <h2 class="inspirate-text">A simple backend toolbox API for php projects</h2>
+        <!-- header-menu-icon (on mobile) -->
+        <ion-icon name="menu-outline" class="desktop-hidden"></ion-icon>
 
-            <nav class="main-section-nav">
-                <ul class="main-nav-links btn-list">
-                    <li><a href="#" class="btn">Get started</a></li>
-                    <li><a href="#" class="btn">Documentation</a></li>
-                </ul>
-            </nav>
+        <!-- header-link-to-docs (on desktops) -->
+        <a href="#" class="btn mobile-hidden">Getting started</a>
+    </nav>
 
-        </section>
+    <div class="container-fluid" id="main">
 
-        <section class="main-section grid">
-            <h2 class="inspirate-text">Build awesome applications with simplicity</h2>
+        <div class="container text-center align-middle justify-content-center flex-column">
+            <img src="img/icons/crystal.png" alt="Astatine logo" class="img-fluid icon" id="page-logo">
 
-            <div class="grid-card">
-                <img src="..." alt="" class="grid-card-img">
-                <h5 class="grid-card-title">Database connection</h5>
-                <p class="grid-card-text"></p>
-                <a href="#" class="grid-card-link"></a>
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quo explicabo obcaecati 
+                odit modi voluptate labore, assumenda quia earum animi. Est dolores amet laborum et necessitatibus,
+                rerum nulla voluptas ratione?
+            </h3>
+
+            <div class="row">
+                <a href="#" class="btn col">
+                    Getting started
+                </a>
+
+                <a href="#" class="btn col">
+                    Documentation
+                </a>
             </div>
-        </section>
+            </nav>
+        </div>
 
-    </main>
+        <div class="container text-center align-middle justify-content-center flex-column">
+           <h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam labore vero provident 
+            cupiditate aspernatur enim doloremque reprehenderit saepe sit, ratione, totam tempora ipsum
+             expedita ducimus perspiciatis quia itaque quos!
+           </h3>
 
-    <footer class="page-footer">
+           <img src="img/icons/atom.png" alt="Iridium cli" class="img-fluid icon">
 
-        <section class="footer-section">
-            <!--  -->
-        </section>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi, expedita quis recusandae,
+             hic architecto error accusamus, ipsum incidunt obcaecati sed debitis provident. Fugit ducimus dolorem 
+             quidem, est dignissimos voluptates!
+           </p>
 
-    </footer>
+           <a href="#" class="btn">
+                Iridium cli
+           </a>
+        </div>
+
+        <div class="container text-center align-middle justify-content-center flex-column">
+            <h3>
+                Some features
+            </h3>
+
+            <div class="row">
+
+                <div class="card col" style="width: 18rem;">
+                    <i class="fa-solid fa-database"></i>
+                    <div class="card-body">
+                      <h5 class="card-title">Database</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Database socket</a>
+                    </div>
+                  </div>
+
+                  <div class="card col" style="width: 18rem;">
+                    <i class="fa-solid fa-trowel-bricks"></i>
+                    <div class="card-body">
+                      <h5 class="card-title">Data handling</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Query builder</a>
+                    </div>
+                  </div>
+
+                  <div class="card col" style="width: 18rem;">
+                    <i class="fa-solid fa-table"></i>
+                    <div class="card-body">
+                      <h5 class="card-title">Table contructor</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Migrations</a>
+                    </div>
+                  </div>
+
+                  <div class="card col" style="width: 18rem;">
+                    <i class="fa-solid fa-mask"></i>
+                    <div class="card-body">
+                      <h5 class="card-title">Hashing</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Mask facade</a>
+                    </div>
+                  </div>
+            </div>
+
+         </div>
+
+         <div class="container text-center align-middle justify-content-center flex-column">
+            <div class="row">
+                <div class="col">
+
+                    <h3>
+                        Enjoy the code
+                    </h3>
+                    
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi, expedita quis recusandae,
+                        hic architecto error accusamus, ipsum incidunt obcaecati sed debitis provident. Fugit ducimus dolorem 
+                        quidem, est dignissimos voluptates!
+                    </p>
+
+                </div>
+                
+                <div class="col">
+
+                    <img src="img/code-examples/db-select.png" alt="Iridium cli" class="img-fluid code-example">
+
+                </div>
+                
+            </div>
+         </div>
+
+         <div class="container text-center align-middle justify-content-center flex-column">
+            <div class="row">
+                <div class="col">
+
+                    <h3>
+                        Make it easy
+                    </h3>
+                    
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi, expedita quis recusandae,
+                        hic architecto error accusamus, ipsum incidunt obcaecati sed debitis provident. Fugit ducimus dolorem 
+                        quidem, est dignissimos voluptates!
+                    </p>
+
+                </div>
+                
+                <div class="col">
+
+                    <img src="img/code-examples/iridium_cli.png" alt="Iridium cli" class="img-fluid code-example">
+
+                </div>
+                
+            </div>
+         </div>
+
+    </div>
+
+   <!-- TODO: FOOTER -->
+
+  </div>
 
 </body>
 </html>

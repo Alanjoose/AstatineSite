@@ -35,6 +35,51 @@ html
     font-size: clamp(1em, 1.2em, 1.5em);
 }
 
+#title
+{
+    align-items: center;
+}
+
+#logo-icon
+{
+    width: 50px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
 #main
 {
     padding: 2rem;
@@ -53,7 +98,7 @@ html
 
 #main .container h3
 {
-    word-break: break-all;
+    word-break:normal;
     font-family: var(--main-font);
 }
 
@@ -70,6 +115,7 @@ html
 #page-logo
 {
     filter: drop-shadow(30px, 10px, 15px, #000);
+    -webkit-filter: drop-shadow(30px, 10px, 15px, #000);
 }
 
 #main .row i
@@ -85,4 +131,62 @@ html
     border-radius: 16px;
     transform: rotate(-5deg);
     filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, .5));
+}
+
+.container-fluid .btn
+{
+    padding: .5rem;
+}
+
+#main .card
+{
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, .5));
+    -webkit-filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, .5));
+}
+
+/* SIDEBAR */
+
+.sidebar {     
+    background:#fff; 
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+    border-radius:3px;
+    width:300px;
+    padding:10px;
+    display: none;
+}
+.sidebar ul {
+    list-style-type: none;
+}
+.sidebar ul li {
+  padding: 6px 0;
+}
+.sidebar ul li a i { font-size:1.1em; }
+.sidebar ul li a {
+  
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  font-size:1em;
+  font-family: 'open_sansregular';
+  color: #555555;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.sidebar ul li a::after {
+ 
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.sidebar ul li a:hover::after {
+  
+  transform: scaleX(1);
+  transform-origin: left;
 }
